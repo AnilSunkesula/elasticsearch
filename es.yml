@@ -1,0 +1,5 @@
+network.host: _local_,_site_
+discovery.zen.minimum_master_nodes: 2
+bootstrap.system_call_filter: false
+node.name:
+cluster.name:
