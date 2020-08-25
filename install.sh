@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# ====================Install Java===================="
+sudo apt update -y
+sudo apt install openjdk-8-jre-headless -y
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
 # ====================Install elasticsearch===================="
 
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
