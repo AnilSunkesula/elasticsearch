@@ -3,3 +3,10 @@ curl -XPUT 'localhost:9200/_cluster/settings' -d '{
         "indices.store.throttle.max_bytes_per_sec" : "100mb"
     }
 }'
+
+
+curl -XPUT 'localhost:9200/my_index/_settings' -d '{
+    "index" : {
+        "refresh_interval" : "1s"
+    } 
+}'
