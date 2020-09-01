@@ -29,3 +29,10 @@ curl -X PUT "http://localhost:9200/_cluster/settings?pretty" -H 'Content-Type: a
     }
 }
 '
+
+
+curl -XPUT 'http://localhost:9200/my_index/_settings' -H 'Content-Type: application/json' -d '{
+    "index" : {
+        "refresh_interval" : "-1s"
+    } 
+}'
