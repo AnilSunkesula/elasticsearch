@@ -20,3 +20,12 @@ curl -X PUT "localhost:9200/_cluster/settings" -H
     }
 }
 '
+
+
+curl -X PUT "http://localhost:9200/_cluster/settings?pretty" -H 'Content-Type: application/json' -d'
+{
+    "persistent" : {
+        "indices.recovery.max_bytes_per_sec" : "50mb"
+    }
+}
+'
