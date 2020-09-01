@@ -1,0 +1,5 @@
+curl -XPUT 'localhost:9200/_cluster/settings' -d '{
+    "persistent" : {
+        "indices.store.throttle.max_bytes_per_sec" : "100mb"
+    }
+}'
