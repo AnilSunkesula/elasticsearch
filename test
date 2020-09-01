@@ -12,6 +12,7 @@ curl -XPUT 'localhost:9200/my_index/_settings' -d '{
 }'
 
 
+curl -X PUT "localhost:9200/_cluster/settings" -H
 'Content-Type: application/json' -d'
 {
     "persistent" : {
