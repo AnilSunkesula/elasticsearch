@@ -1,1 +1,11 @@
 { "persistent": { }, "transient": { "cluster": { "routing": { "allocation": { "enable": "all" } } } } 
+
+discovery.seed_hosts:
+   - 192.168.1.10:9300
+   - 192.168.1.11 
+   - seeds.mydomain.com 
+   - [0:0:0:0:0:ffff:c0a8:10c]:9301 
+cluster.initial_master_nodes: 
+   - master-node-a
+   - master-node-b
+   - master-node-c
