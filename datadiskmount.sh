@@ -15,7 +15,7 @@ sudo mkdir /datadisk1
 sudo mount /dev/${PARTED}1 /datadisk1
 
 #update fstab file
-echo "UUID=(blkid -o value -s UUID /dev/${PARTED}1   /datadisk1   xfs   defaults,nofail   1   2" >> /etc/fstab
+echo "UUID=$(blkid -o value -s UUID /dev/${PARTED}1)   /datadisk1   xfs   defaults,nofail   1   2" >> /etc/fstab
 
 echo "datadisk is mounted successfully" >> /tmp/datadisklog.txt
 lsblk >> /tmp/datadisklog.txt
