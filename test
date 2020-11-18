@@ -36,3 +36,16 @@ curl -XPUT 'http://localhost:9200/my_index/_settings' -H 'Content-Type: applicat
         "refresh_interval" : "-1s"
     } 
 }'
+
+
+
+
+
+curl -X PUT "http://10.160.89.16:9200/_snapshot/sahla_buy_backup?pretty" -H 'Content-Type: application/json' -d'
+{
+"type": "fs",
+"settings": {
+"location": "/datadisk2"
+}
+}
+'
