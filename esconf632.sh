@@ -27,4 +27,4 @@ echo "        - $NODE3IP" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 sudo sed -i "s/path.data: \/var\/lib\/elasticsearch/path.data: \/datadisk1\/elasticsearch/g" /etc/elasticsearch/elasticsearch.yml
 sudo mkdir /etc/systemd/system/elasticsearch.service.d
 echo "[Service]" >> /etc/systemd/system/elasticsearch.service.d/override.conf
-echo "[LimitMEMLOCK=infinity]" >> /etc/systemd/system/elasticsearch.service.d/override.conf
+echo "LimitMEMLOCK=infinity" >> /etc/systemd/system/elasticsearch.service.d/override.conf
