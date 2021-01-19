@@ -1,0 +1,8 @@
+curl -X PUT "http://10.160.89.16:9200/_snapshot/sahla_backup?pretty" -H 'Content-Type: application/json' -d'
+{
+"type": "fs",
+"settings": {
+"location": "/datadisk2/elasticsearchbkp/"
+}
+}
+'
