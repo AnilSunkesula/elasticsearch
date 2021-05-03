@@ -7,9 +7,9 @@ NODE2IP=$3
 NODE3IP=$4
 HOSTIP=`hostname -i | awk '{print $2}'`
 HOSTNAME=`hostname`
-DATA_PATH="/datadisk1/elasticsearch"
+DATA_PATH="/datadisc1/elasticsearch"
 DATA_PATH_DEFAULT="/var/lib/elasticsearch"
-mv /var/lib/elasticsearch /datadisk1
+mv /var/lib/elasticsearch /datadisc1
 sudo sed -i "s/#cluster.name: my-application/cluster.name: $CLUSTER_NAME/g" /etc/elasticsearch/elasticsearch.yml
 sudo sed -i "s/#node.name: node-1/node.name: $HOSTNAME/g" /etc/elasticsearch/elasticsearch.yml
 sudo sed -i "s/#bootstrap.memory_lock: true/bootstrap.memory_lock: true/g" /etc/elasticsearch/elasticsearch.yml
